@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>通过ID获取元素</title>
+<script type="text/javascript" src="../../JQuery/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+	$(
+		function(){
+			$("#id_name").css("color","red");
+			}
+	);
+</script>
+</head>
+
+<body>
+	<div>这个标签没有指定ID，所以不变色</div>
+    <div id="id_name" >标签为id_name，变为红色</div>
+    <P id="id_p">标签id不是id_name，不变红色</P>
+</body>
+</html>

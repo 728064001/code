@@ -1,0 +1,21 @@
+/* CSS Document */
+body{margin:0px 0px;
+		padding:0px 0px;
+		background-color:#004E8E;
+	}
+
+#menu{
+	width:905px;
+	height:700px;
+	margin-left:5px;
+	}
+#menu_fenlei{
+	list-style:none;
+	}
+#menu_fenlei li{
+	padding-left:6px;
+	float:left;
+	}
+#menu_lib{
+	font-weight:800;
+	}

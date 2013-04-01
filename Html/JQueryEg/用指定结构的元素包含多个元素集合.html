@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用指定结构的元素包含多个元素集合</title>
+<link href="div.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript"  src="../../JQuery/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+	$(
+		function(){
+			$("span").wrapAll("<div></div>")	
+		}	
+	);
+</script>
+</head>
+
+<body>
+	<span>1这个SPAN标签的外面包一层DIV</span><br/>
+	<span>2这个SPAN标签的外面包一层DIV</span>
+</body>
+</html>

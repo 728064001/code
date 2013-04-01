@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery UI Draggable - Default functionality</title>
+	<link rel="stylesheet" href="style/jquery-ui-1.8.24.custom.css" />
+	<script src="js/jquery-1.8.2.js"></script>
+	<script src="js/jquery-ui-1.8.24.custom.min.js"></script>
+    <link rel="stylesheet" href="../JQueryEg/div.css" />
+    <style>
+    	ul{
+			list-style:onoe;
+			color:red;
+			}
+		ul li {
+			float:left; padding-left:5px;
+			color:red;
+			}
+		#tags{
+			width:600px;}
+    </style>
+	<script>
+		$(
+		function(){
+			$("#tags").tabs();	
+		}
+		);
+	</script>
+</head>
+<body>
+<div id="tags">
+    <ul>        
+        <li><a href="#tabs-1">Nunc tincidunt</a></li>        
+        <li><a href="#tabs-2">Proin dolor</a></li>        
+        <li><a href="#tabs-3">Aenean lacinia</a></li>    
+    </ul>
+    
+    <div id="tabs-1">
+	<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    </div>
+    <div id="tabs-2">
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+    </div>
+    <div id="tabs-3">
+        <p>cccccccccccccccccccccccccccccc</p>
+    </div>
+</div>
+</body>
+</html>

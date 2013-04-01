@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>从集合元素中通过指定序号获取元素</title>
+<script type="text/javascript" src="../../JQuery/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+	$(
+		function(){
+			$("p").eq(0).css("color","red");
+			}
+	);
+</script>
+
+</head>
+
+<body>
+<p>0号</p>
+<p>1号</p>
+<p>2号</p>
+<p>3号</p>
+<p>4号</p>
+<p>5号</p>
+<p>6号</p>
+<p>7号</p>
+</body>
+</html>

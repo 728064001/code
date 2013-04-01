@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>通过状态获取表单元素</title>
+<script type="text/javascript" src="../../JQuery/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+	$(
+		function(){
+		  $(":enabled").val("可以输入");
+		  $(":disabled").val("不可用");
+		}
+	);
+</script>
+
+</head>
+
+<body>
+<form>
+  <ul>
+    <li><label>订单号码</label><input type = "text" name="" disabled="disabled"/></li>
+    <li><label>订单所有者</label><input type = "text"/></li>
+    <li><input type = "checkbox" name="category" value="红"/><label>红</label>
+    <input type = "checkbox" name="category" value="黄"/><label>黄</label>
+    <input type = "checkbox" name="category" value="蓝"/><label>蓝</label>
+    <input type = "checkbox" name="category" value="紫"/><label>紫</label>
+    <input type = "checkbox" name="category" value="白"/><label>白</label></li>
+    
+    <li>
+      <select multiple= "multiple " >
+        <option>选项1</option>
+        <option>选项2</option>
+        <option>选项3</option>
+        <option>选项4</option>
+      </select>
+    </li>
+  </ul>
+</form>
+<div></div>
+</body>
+</html>

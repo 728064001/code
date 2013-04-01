@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>通过过滤器获取表单元素</title>
+	<script src="../JQuery/jquery-1.8.0.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(
+			function(){
+				$("input:text:enabled").val("可以输入");
+				$("input:text:disabled").val("不能输入");
+			}
+		);
+
+	</script>
+	</head>
+	<body>
+		<form>
+			<ul>	
+				<li><label>订单号码</label><input type="text" name="" disabled="disabled"></li>
+				<li><label>订单所有者</label><input type="text"></li>
+				<li><input type="checkbox" name="category" value="红" /><label>红</label></li>
+				<li><input type="checkbox" name="category" value="黄" /><label>黄</label></li>
+				<li><input type="checkbox" name="category" value="蓝" /><label>蓝</label></li>
+				<li><input type="checkbox" name="category" value="紫" /><label>紫</label></li>
+				<li><input type="checkbox" name="category" value="白" /><label>白</label></li>
+				<li>
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</li>
+			</ul>
+		</form>
+		<div id="msg">
+			<p id="category"></p>
+			<p id="option"></p>
+		</div>
+	</body>
+</html>

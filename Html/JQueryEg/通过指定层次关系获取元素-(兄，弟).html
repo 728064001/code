@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>通过指定层次关系获取元素-(兄，弟)</title>
+<script type="text/javascript" src="../../JQuery/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+	$(
+		function(){
+			$("form~label").css("color","red");
+			}
+	);
+</script>
+</head>
+
+<body>
+<form>
+<label>子节点</label><input type="text" value="背景变成红色">
+<fieldset>
+<label>孙节点</label><input border="none" type="text" value="背景变成红色">
+</fieldset>
+</form>
+<label>form外</label><input type="text" value="背景不变色">
+<fieldset>
+<label>form外</label><input type="text" value="背景不变色">
+</fieldset>
+</body>
+</html>
