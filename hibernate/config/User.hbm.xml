@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.modle.User" table="t_user1">
+		<id name="Id" column="user_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="username" unique="true" length="15"></property>
+		<property name="password" length="15"></property>
+		<property name="createTime" column="create_time" ></property>
+		<property name="expireTime" column="expire_time" ></property>
+	</class>
+	
+</hibernate-mapping>
