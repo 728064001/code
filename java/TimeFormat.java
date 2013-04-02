@@ -11,4 +11,6 @@ public class TimeFormat {
 		String dateTimeStr = simpledateformat.format(date);		
 		System.out.println(dateTimeStr);
 	}
+
 }
+//http://www.cnblogs.com/yuxuan/archive/2011/07/25/2116250.html
