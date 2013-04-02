@@ -1,5 +1,3 @@
-package com.paixu;
-
 public class Sequence {
 	public static void main(String[] args) {
 		int[] intArry = {2,40,1,5,3};
