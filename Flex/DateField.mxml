@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			public function sh(ti:String):void{
+				Alert.show(ti);
+			}
+		]]>
+	</fx:Script>
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<mx:DateField text="" id="df" change="sh(df.selectedDate.toString())"/>
+	<s:Spacer height="50"/>
+	<mx:DateChooser id="dc" maxYear="2022" minYear="1999" change="sh(dc.selectedDate.toString())"/>
+</s:Application>

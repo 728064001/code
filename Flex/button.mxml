@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			[Bindable]
+			public var myArray:ArrayCollection = new ArrayCollection(['a','b','c']);
+			public function showMsg(str:String):void{
+				Alert.show(str);
+			}
+		]]>
+	</fx:Script>
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:Button width="100" label="确认" fontWeight="bold" color="red" fontSize="14" click="showMsg('button')"/>
+	<s:Spacer height="10"/>
+	<mx:LinkButton id="lb" label="linkbutton" click="showMsg('linkbutton')"/>
+	<s:Spacer height="10"/>
+	<s:ButtonBar id="bb" dataProvider="{myArray}" click="showMsg(ButtonBar(event.currentTarget).selectedItem)"/>
+	<s:Spacer height="10"/>
+	<mx:LinkBar id="lb1" dataProvider="{myArray}" itemClick="showMsg(event.label)"/>
+	<s:Spacer height="10"/>
+	<mx:ToggleButtonBar id="tbb" dataProvider="{myArray}" itemClick="showMsg(event.label)"/>
+	<s:Spacer height="10"/>
+	<mx:PopUpMenuButton id="pb" dataProvider="{myArray}" itemClick="showMsg(event.label)"/>
+	<s:Spacer height="10"/>
+	
+</s:Application>

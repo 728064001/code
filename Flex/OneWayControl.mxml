@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			import mx.events.DropdownEvent;
+			public var arr:ArrayCollection = new ArrayCollection(['a','b','c']);
+			public function showMsg(str:String):void{
+				Alert.show(str);
+			}
+		]]>
+	</fx:Script>
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	
+	<s:CheckBox id="cb0" label="checkbox1" click='showMsg("return:"+cb0.selected)'/>
+	<s:CheckBox id="cb1" label="checkbox2"/>
+	<s:CheckBox id="cb2" label="checkbox3"/>
+	<s:Spacer height="10"/>
+	<s:RadioButton id="rd" label="yes" value="yes" click="showMsg('yes')"/>
+	<s:Spacer height="10"/>
+	<s:DropDownList id="ddl" dataProvider="{arr}" change="showMsg(DropDownList(event.currentTarget).selectedItem)" />
+	<s:Spacer height="10"/>
+	<mx:ColorPicker id="clr" change="showMsg('color:'+event.currentTarget.selectedColor)"/>
+</s:Application>

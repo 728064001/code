@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	
+	<s:NumericStepper id="ns" minimum="0" maximum="100" stepSize="2"/>
+	<s:Spacer height="10"/>
+	<s:Spinner id="sp" minimum="0" maximum="100" stepSize="2"/>
+	<s:Spacer height="10"/>
+	<mx:HSlider id="hs" minimum="0" maximum="100" snapInterval="2" tickInterval="2" width="200" labels="[0,100]"/>
+	<mx:VSlider id="vs" minimum="0" maximum="100" snapInterval="2" height="400" tickInterval="2" labels="[0,20,40,60,80,100]" />
+</s:Application>
