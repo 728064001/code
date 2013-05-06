@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<s:layout>
+		<s:HorizontalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<mx:DateValidator
+			yearSource="{year}"
+			yearProperty="value"
+			monthSource="{month}"
+			monthProperty="value"
+			daySource="{day}"
+			dayProperty="value"
+			trigger="{submit}"
+			triggerEvent="click"
+		/>
+	</fx:Declarations>
+	<s:NumericStepper id="year" minimum="1900" maximum="2098" />
+	<s:Label text="年" fontSize="14" />
+	
+	<s:NumericStepper id="month"  minimum="1" maximum="12" />
+	<s:Label text="月" fontSize="14" />
+	
+	<s:NumericStepper id="day"  minimum="1" maximum="31" />
+	<s:Label text="日" fontSize="14" />
+	
+	<s:Button id="submit" label="submit" />
+	
+</s:Application>

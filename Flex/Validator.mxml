@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!--required="true"当前字段为必填项-->
+		<mx:Validator source="{username}" property="text" enabled="true" required="true"
+					  requiredFieldError="*用户名为必填项！"
+					  
+					  
+					  />
+	</fx:Declarations>
+	<s:Label text="Enter you name:" fontSize="14" fontWeight="bold"/>
+	<s:TextInput id="username" fontSize="14"/>
+	<s:TextInput id="userpass" fontSize="14"/>
+</s:Application>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			[Bindable]
+			public var myArray:ArrayCollection = new ArrayCollection([
+				{name:"石头",email:"728064001@qq.com",url:"www.shitou.com"},
+				{name:"狮子",email:"693615055@qq.com",url:"www.shizi.com"},
+				{name:"笨猫",email:"693615055@qq.com",url:"www.beimao.cn"}
+			]);
+			[Bindable]
+			public var myArray1:ArrayCollection = new ArrayCollection([
+				{name:"石头",email:"728064001@qq.com",url:"www.shitou.com"},
+				{name:"狮子",email:"693615055@qq.com",url:"www.shizi.com"},
+				{name:"笨猫",email:"693615055@qq.com",url:"www.beimao.cn"}
+			]);
+		]]>
+	</fx:Script>
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<mx:DataGrid id="gd1" width="400" height="200" dataProvider="{myArray}">
+		
+	</mx:DataGrid>
+	<s:Spacer height="10"/>
+	<mx:DataGrid id="gd2" height="200" dataProvider="{myArray1}">
+		<mx:columns>
+			<mx:DataGridColumn  dataField="name" headerText="姓名" />
+			<mx:DataGridColumn width="300"  dataField="email" headerText="邮箱" />
+			<mx:DataGridColumn  dataField="url" headerText="网站" />
+		</mx:columns>
+	</mx:DataGrid>
+</s:Application>

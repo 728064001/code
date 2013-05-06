@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			[Bindable]
+			public var myArray:ArrayCollection = new ArrayCollection([
+				{name:"石头",email:"728064001@qq.com",url:"www.shitou.com"},
+				{name:"狮子",email:"693615055@qq.com",url:"www.shizi.com"},
+				{name:"笨猫",email:"693615055@qq.com",url:"www.beimao.cn"}
+			]);
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:Label text="labelField 属性是指定显示 集合数组中的哪一列数据" />
+	<mx:List id="myFriends" x="100" y="100" dataProvider="{myArray}"
+			 labelField="name" columnWidth="200"
+			 columnCount="3"
+			 direction="rtl"
+			 >
+	</mx:List>
+</s:Application>

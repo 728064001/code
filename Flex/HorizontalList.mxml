@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<s:layout>
+		<s:HorizontalLayout/>
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			[Bindable]
+			public var myArray:ArrayCollection = new ArrayCollection([
+				{name:"石头",email:"728064001@qq.com",url:"www.shitou.com"},
+				{name:"狮子",email:"693615055@qq.com",url:"www.shizi.com"},
+				{name:"笨猫",email:"693615055@qq.com",url:"www.beimao.cn"}
+			]);
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:Label text="HorizontalList 水平排列显示 集合数组中的指定一列数据" />
+	<mx:HorizontalList id="myFriends" x="100" y="100" dataProvider="{myArray}"
+					   labelField="email"
+					   >
+		
+	</mx:HorizontalList>
+</s:Application>
