@@ -1,0 +1,23 @@
+<script type="text/javascript" src="yui-min.js"></script>
+<script type="text/javascript">
+	YUI().use('node','transition',function(Y){
+		var divnode = Y.one("#demo");
+		var butt = Y.one("#but");
+		var butt1 = Y.one("#but1");
+		butt.on(
+			'click',function(){
+				divnode.hide(true);
+			}
+			);
+		butt1.on("click",function(){
+			divnode.setHTML("OKOKOKOKOKOKOKOK");
+			divnode.show(true);
+		});
+		
+	});
+</script>
+<div id="demo">dsfdsfdsfdsf</div>
+<br/>
+<input type="button" id="but" value="hide" />
+<br/>
+<input type="button" id="but1" value="change value" />
