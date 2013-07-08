@@ -1,0 +1,29 @@
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+function getvalue(){
+					var v = $("#c").val();
+					return v;
+			}
+	$(
+		function(){
+			
+			/*
+			
+			 */
+			
+			$("#c").change(
+				function(){
+					var v = getvalue();
+					if(v==""){
+						alert(" value is null");
+					}
+					else{
+						alert(v);
+					}
+				}
+			);
+		}
+	);
+</script>
+
+<input id="c"/>
