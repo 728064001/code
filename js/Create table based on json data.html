@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Create a table based on json data</title>
+		<script type="text/javascript">
+			//json data
+			var jsonData ={
+				"userinfo":[{"id":1,"name":"郝磊","age":21,"sex":"男","address":"深圳福田"},{"id":2,"name":"徐松","age":20,"sex":"女","address":"湖北随州"},{"id":3,"name":"狮子","age":19,"sex":"女","address":"武汉汉阳"},{"id":4,"name":"小小","age":9,"sex":"女","address":"北海大道"},{"id":5,"name":"黑子","age":10,"sex":"男","address":"铜锣湾"},{"id":6,"name":"猫宝","age":21,"sex":"女","address":"深圳福田"},{"id":7,"name":"旺财","age":19,"sex":"男","address":"北海大道"},{"id":8,"name":"花咪","age":7,"sex":"女","address":"深南大道"},{"id":9,"name":"蓝猫","age":12,"sex":"男","address":"上海南路"},{"id":10,"name":"淘气","age":11,"sex":"女","address":"上海南路"},{"id":11,"name":"萌猫","age":21,"sex":"女","address":"上海宾馆"},{"id":12,"name":"夏柔","age":23,"sex":"女","address":"富南三路"}]
+			}
+
+			//test
+			alert(jsonData.userinfo.length);
+			document.write(jsonData.userinfo[2].name);
+
+			//create table
+			var getBody = document.getElementsByTagName("body")[0];
+
+			var ctable = document.createElement("table");
+			var ctbody = document.createElement("tbody");
+		</script>
+	<head>
+
+	<body>
+
+	</body>
+</html>
