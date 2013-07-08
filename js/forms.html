@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>form.elements[]属性</title>
+	</head>
+
+	<body>
+			<script type="text/javascript">
+				function asd(){
+				// var form = document.forms["as"];//得到一个form对象的引用
+				// var s = form.elements.length;
+				// var t = form.elements[0].type;
+				var ss = document.forms.length;//当前文档中有多少个form对象
+				document.write(ss);
+				}
+			</script>
+
+			<FORM name="as" id="form1">
+				<a href="#"></a>
+				<p></p>
+				<input type="button" id="but" name="but" onclick="asd()" />
+			</FORM>
+	</body>
+</html>

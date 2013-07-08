@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>radio</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			
+			function buts(){
+				var ra = document.forms["form1"];
+				var radiolength = ra.rad.length;
+				alert(radiolength);
+				for (var i = 0; i < radiolength; i++) {
+					document.write(ra.rad[i].value);
+					document.write(ra.rad[i].checked);
+				};
+			}
+		</script>
+		<form name="form1">
+			<input type="radio" name="rad" value="A"/>A<br/>
+			<input type="radio" name="rad" value="B"/>B<br/>
+			<input type="radio" name="rad" value="C"/>C<br/>
+			<input type="radio" name="rad" value="D"/>D<br/>
+			<input type="radio" name="rad" value="E"/>E<br/>
+			<input type="button" name="but" onclick="buts()"/>
+		</form>
+	</body>
+</html>

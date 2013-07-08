@@ -1,0 +1,30 @@
+<script type="text/javascript">
+	var d = new Date();
+	// document.writeln(data1);
+	document.writeln(d.getFullYear());
+	document.writeln(d.getMonth()+1+"月");
+	document.writeln(d.getDate()+"日");
+	var day = d.getDay();
+
+		switch(day){
+		case 0: document.writeln("星期日");
+			break;
+		case 1: document.writeln("星期一");
+			break;
+		case 2: document.writeln("星期二");
+			break;
+		case 3: document.writeln("星期三");
+			break;
+		case 4: document.writeln("星期四");
+			break;
+		case 5: document.writeln("星期五");
+			break;
+		case 6: document.writeln("星期六");
+			break;
+		default: document.writeln("");
+		}
+	document.writeln(d.getHours()+"时");
+	document.writeln(d.getMinutes()+"分");
+	document.writeln(d.getSeconds()+"秒");
+	document.writeln(d.getTime());
+</script>

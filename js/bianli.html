@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>遍历节点树</title>
+	</head>
+
+	<body id="mybody">
+		<div id="mydiv">遍历节点树</div>
+		<script type="text/javascript">
+			var rootNodeList = document.childNodes;
+			var len = rootNodeList.length;
+			// alert(len);
+			for (var i=0; i<len; i++) {
+				var rootNode = rootNodeList[i];
+				// alert(rootNode.nodeName);
+
+				
+					document.write("["+rootNode.nodeName+"]<br/>");
+					document.write("==="+rootNode.firstChild.nodeName+"===<br/>");
+					processNode(rootNode.firstChild);
+
+					document.write("==="+rootNode.lastChild.nodeName+"===<br/>");
+					processNode(rootNode.lastChild);
+				
+			}
+
+			function processNode(node){
+					if(node.hasChildNodes()){
+						alert(node.childNodes[1].nodeName);
+						var l = node.childNodes.length;
+
+						for (var i = 0; i < l; i++) {
+							if(node.childNodes[i].nodeName!="#text"){
+							document.write("============"+node.childNodes[i].nodeName+"============<br/>");
+							document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;值："+node.childNodes[i].innerHTML+"<br/>");
+							}
+						};
+						// document.write(">>>>>节点名"+node.firstChild.nodeName+"<br/>");
+						// document.write(">>>>>节点值"+node.firstChild.innerHTML+"<br/>");
+						// document.write(">>>>>ID"+node.firstChild.getAttribute("id")+"<br/>");
+					}
+			}
+		</script>
+	</body>
+
+</html>

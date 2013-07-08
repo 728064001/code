@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>checked</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function buts(){
+				if(document.forms["form1"].elements[0].checked){
+					alert("复选框被选中了");
+				}else{
+					alert("复选框没有被选中");
+				}
+			}
+		</script>
+		<form name="form1">
+		<input type="checkbox" name="checkbox" onclick="buts()"/>check here<br/>
+		//<input type="button" name="but" value="click" onclick="buts()" />
+		</form>
+	</body>
+<html>

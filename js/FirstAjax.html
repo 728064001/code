@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>firstajax</title>
+		<script type="text/javascript">
+			var xmlhttprequest;
+			function onstatuschange(){
+				if(xmlhttprequest.readyState == 4){
+					if(xmlhttprequest.status == 200){
+						document.getElementById("mess").innerHTML = xmlhttprequest.responseText;
+					}else{
+						document.getElementById("mess").innerHTML = xmlhttprequest.status;
+					}
+				}
+			}
+			function onblur(obj){
+				if(window.navigator.appName == "Microsoft Internet Explorer"){
+					try{
+						xmlhttprequest = new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					catch(E){
+						return null;
+						}
+				}else{
+						xmlhttprequest = new XMLHttpRequest();
+					}//if--end
+
+				var url = "";
+				xmlhttprequest.open("POST",url,true);
+				xmlhttprequest.onreadystatechange = onstatuschange;
+				xmlhttprequest.send(null);
+			}//func
+			
+		</script>
+	</head>
+
+	<body>
+		username:<input type="text" id="text1" onblur="onblur(this)" /><br/>
+		<span id="idcheck" style="width:153px;height:10px">
+			<div id="mess"></div>
+		</span>
+
+	</body>
+</html>

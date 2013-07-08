@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>ajaxjson</title>
+		
+		<script type="text/javascript">
+			var xmlHttp;
+			var jsonObj;
+			function createXMLHttpRequest(){
+				if(window.navigator.appName == "Microsoft Internet Explorer"){
+					try{
+						xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					catch(E){
+						return null;
+						}
+				}else{
+						xmlHttp = new XMLHttpRequest();
+					}
+			}
+
+			function getformData(){
+				var un = document.getElementById("username").value;
+				var ua = document.getElementById("userage").value;
+				var uad = document.getElementById("useraddress").value;
+
+				var aj = new addJsonData(un,ua,uad);
+				//将对象转换成json对象
+				jsonObj = JSON.stringify(aj);
+			}
+
+
+			function addJsonData(n,a,d){
+				//创建一个JAVASCRIPT对象
+				this.myname = n;
+				this.myage = a;
+				this.myaddress = d;
+			}
+
+
+			function sendData(){
+				createXMLHttpRequest();
+				getformData();
+				var url = "http://127.0.0.1:8080/JsonAjax/JsonServlet?timeStamp="+new Date().getTime();
+				xmlHttp.open("POST",url,true);
+				xmlHttp.onreadystatechange = handleStateChange;
+				xmlHttp.setRequestHeader("Content-Type","application/x-www-form-rulencoded;");
+				xmlHttp.send(jsonObj);
+			}
+
+			function handleStateChange(){
+				if(xmlHttp.readyState == 4){
+
+					if(xmlHttp.status == 200){
+						alert("message send ok");
+					}else{
+						alert("error1");
+					}
+
+				}else{
+					alert("error2");
+				}
+			}
+		</script>
+
+
+	</head>
+
+	<body>
+		username:<input id="username"/><br/>
+		userage:<input id="userage"/><br/>
+		useraddress:<input id="useraddress"/><br/>
+		<input type="button" value="AJAX Send" onclick="sendData()"/>
+	<body>
+</html>

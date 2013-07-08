@@ -1,0 +1,44 @@
+
+<html>
+	<head>
+	<title>json</title>
+	<script src="json2.js" type="text/javascript" ></script>
+	<script type="text/javascript">
+		var json1 = {
+			"id":12,
+			"names":"haolei",
+			"age":21,
+			"info":{
+				"height":170,
+				"quality":75
+			},
+			"address":[
+				{"city":"shenzhen","code":"2342"},
+				{"city":"beijing","code":"5667"}
+			]
+		}
+		documnet.writeln(json1);
+		document.writeln(json1.names+"<br/>");
+		document.writeln(json1.address[0].code+"<br/>");
+		document.writeln(json1.info.quality+"<br/>");
+		document.writeln(json1.address[1].code+"<br/>");
+		document.writeln(json1.address[0].city+"<br/>");
+
+		function Car(cartype,color,price){
+			this.cartype = cartype;
+			this.color = color;
+			this.price = price;
+
+		}
+
+    	var objcar = new Car("cars","red",3500000);
+
+    	alert(JSON.stringify(objcar));
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

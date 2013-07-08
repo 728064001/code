@@ -1,0 +1,12 @@
+<script type="text/javascript">
+	var n = 0;
+	function print(){
+		document.writeln(n);
+		
+		if(n==1000){
+		window.clearInterval(s);
+		}	
+		n++;
+	}
+	 var s = window.setInterval(print, 10);
+</script>

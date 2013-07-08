@@ -1,0 +1,13 @@
+<script type="text/javascript">
+	function Person(myname,age){
+		this.nam = myname;
+		this.age = age;
+		this.showInfo = function(){
+			return ("my name's "+this.nam+",now age " +this.age);
+		}
+	}
+
+	var person = new Person("shizi",21);
+	document.writeln(person.showInfo());
+	document.writeln("<pre>"+person.constructor()+"</pre>");
+</script>

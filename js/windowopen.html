@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>openwindow</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var win;
+			function openwindow(){
+				win=open("http://www.sina.com","百度","height=600,width=600");
+				// win.location.href="http://www.baidu.com";
+			}
+			function closewindow(){	
+				if(win){
+					win.close();
+					win=null;
+				}
+			}
+		</script>
+		<input type="button" name="openwindow" id="o" value="openwindow" onclick="openwindow()"/>
+		<input type="button" name="closewindow" id="c" value="closewindow" onclick="closewindow()"/>
+	</body>
+</html>

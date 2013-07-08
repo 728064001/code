@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>从Servlet获取JSON数据</title>
+		<script type="text/javascript">
+			//create xmlhttprequest object
+			var xmlhttprequest;
+			function createXmlHttpRequest(){
+				if(window.navigator.appName == "Microsoft Internet Explorer"){
+					xmlhttprequest = new ActiveXObject("Microsoft.XMLHTTP");
+				}else{
+					xmlhttprequest = new XMLHttpRequest();
+				}
+			}
+
+			function sendRequest(){
+				var url ="http://10.1.1.82:8080/JsonAjax/returnjson";
+				var sendData = "getJSON";
+				createXmlHttpRequest();
+				xmlhttprequest.open("POST",url,true);
+				xmlhttprequest.onreadystatechange = handleStateChange;
+				xmlhttprequest.setRequestHeader("Content-Type","application/x-www-form-rulencoded;");
+				xmlhttprequest.send(sendData);
+			}
+
+			function handleStateChange(){
+				if(xmlhttprequest.readyState == 4){
+
+					if(xmlhttprequest.status == 200){
+						alert("getRequest sended");
+					}else{
+						alert("error1");
+					}
+
+				}else{
+					alert("error2");
+				}
+			}
+
+			function parseResults(){
+				
+				var returntext = xmlhttprequest.responseText;
+				var idnode = document.getElementById("d");
+				if(idnode.hasChildNodes()){
+					idnode.removeChild(idnode.childNodes[0]);
+				}
+
+				var textjsonnode = document.createTextNode(returntext);
+				idnode.appendChild(textjsonnode);
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="get JSON Data form Servlet" onclick="sendRequest()"/><br/>
+
+		<h2>Show json:</h2>
+		<div id="d">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<script type="text/javascript">
+	function load(){
+		var  newnode = document.createElement("p");
+		var b1 = document.getElementById("b1");
+		var newtextnode = document.createTextNode("textnode");
+		newnode.appendChild(newtextnode);
+		b1.appendChild(newnode);
+	}
+
+</script>
+
+<body id="b"  onload="load()">
+	<b id="b1">change node</b><br/>
+	<b id="b2">chagge node1</b>
+</body>

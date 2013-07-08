@@ -1,0 +1,30 @@
+<script type="text/javascript">
+	var arrys = new Array();
+	arrys["image1"] = new Image(300, 300);
+	arrys["image1"].src = "http://e.hiphotos.baidu.com/album/w%3D2048/sign=cd70b0a8d1a20cf44690f9df42314a36/95eef01f3a292df5740c9b3abd315c6035a873d5.jpg";
+	arrys["image2"] = new Image(300, 300);
+	arrys["image2"].src = "http://h.hiphotos.baidu.com/album/w%3D2048/sign=14f543e5dcc451daf6f60beb82c55366/b219ebc4b74543a98d0621771f178a82b901146f.jpg";
+	arrys["image3"] = new Image(300, 300);
+	arrys["image3"].src = "http://b262.photo.store.qq.com/psb?/V12G2afu2oPNam/WJGjcUAzyRrSL7oJqme5O.Tm.lpMXoZPvKJLmr9Y.RM!/b/dGzYN5xtTgAA&bo=WAIgAwAAAAABAF4!";
+	arrys["image4"] = new Image(300, 300);
+	arrys["image4"].src = "http://g.hiphotos.baidu.com/album/w%3D2048/sign=c001d8f1dbb44aed594eb9e487248601/279759ee3d6d55fbf4e2ad9d6c224f4a20a4dd61.jpg";
+
+	function ts(list){
+		var img = list.options[list.selectedIndex].value;
+		// alert(img);
+		document.images["tum"].src = arrys[img].src;
+	}
+</script>
+
+<body>
+	<h3>images</h3>
+	<img src="http://e.hiphotos.baidu.com/album/w%3D2048/sign=9515f47eb03533faf5b6942e9cebfc1f/7c1ed21b0ef41bd521a3958450da81cb38db3dc9.jpg" name="tum" width="300" height="300">
+	<form>
+		<select name="cached" onchange="ts(this)">
+			<option value="image1" />b
+			<option value="image2" />s
+			<option value="image3" />mylion
+			<option value="image4" />t
+		</select>
+	</form>
+</body>

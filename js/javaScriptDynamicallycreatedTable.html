@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>用javascript动态创建表格</title>
+		<script type="text/javascript">
+			//create json data
+			var personInfo = {
+				"infos":[
+					{"username":"郝磊","age":22,"city":"荆门","code":"2342"},
+					{"username":"狮子","age":21,"city":"随州","code":"2456"},
+					{"username":"凡凡","age":18,"city":"京山","code":"4318"}
+				]
+			};
+
+			//show all json to web
+			var infolen = personInfo.infos.length;
+			for(var t = 0;t <infolen;t++){
+				var ds = personInfo.infos[t];
+				for (i in ds) {
+					document.writeln(i+":"+ds[i]);
+				}
+				document.write("<br/>");
+			}
+			//get body table
+			var tablenode = document.getElementById("t");
+			//get span
+			var spannode = document.getElementById("tab");
+			//insert noe row
+			var row1 = tablenode.insertRow();
+			var row2 = tablenode.insertRow();
+			var row3 = tablenode.insertRow();
+			var row4 = tablenode.insertRow();
+
+			spannode.appendChild(row1);
+			//
+			// //create 'th'
+			// var createth = document.createElement("th");
+		</script>
+	</head>
+
+	<body>
+		<div >
+			<table id="t" width="300" border="1" bgcolor="#c0c0c0">
+				<tr>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>地址</th>
+					<th>邮编</th>
+				</tr>
+				<span id="tab">
+					
+				</span>
+			</table>
+		</div>
+	</body>
+</html>

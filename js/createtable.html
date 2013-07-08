@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript">
+<!--
+
+
+//获取body标签
+var mybody = document.getElementsByTagName("body")[0];
+
+//创建一个<table>元素和一个<tbody>元素
+mytable = document.createElement("table");
+mytablebody = document.createElement("tbody");
+
+mycurrent_row = document.createElement("tr");
+//创建一个<td>元素
+mycurrent_cell = document.createElement("td");
+mycurrent_row.setAttribute("colspan", "10");
+mycurrent_row.setAttribute("bgcolor", "#EEF4EA");
+mycurrent_row.setAttribute("class", "title");
+//创建一个文本节点
+mycurrent_cell.innerHTML = "<b>name</b>";
+//将列<td>添加到行<tr>
+mycurrent_row.appendChild(mycurrent_cell);
+
+//创建一个<td>元素
+mycurrent_cell = document.createElement("td");
+mycurrent_row.setAttribute("colspan", "10");
+mycurrent_row.setAttribute("bgcolor", "#EEF4EA");
+mycurrent_row.setAttribute("class", "title");
+//创建一个文本节点
+mycurrent_cell.innerHTML = "<b>age</b>";
+//将列<td>添加到行<tr>
+mycurrent_row.appendChild(mycurrent_cell);
+mycurrent_row.setAttribute("bgcolor", "#E7E7E7");
+//将行<tr>添加到<tbody>
+mytablebody.appendChild(mycurrent_row);
+
+//创建所有的单元格
+for(var j = 0; j < 1; j++) {
+//创建一个<tr>元素
+mycurrent_row = document.createElement("tr");
+for(var m = 0; m < 2; m++) {
+var name;
+var value;
+if (m==0){
+name = "张三";
+value = "19";
+}else if (m==1){
+name = "李四";
+value = "29";
+}
+mycurrent_row = document.createElement("tr");
+for(var i = 0; i < 2; i++) {
+//创建一个<td>元素
+mycurrent_cell = document.createElement("td");
+if (i==0){
+//创建一个文本节点
+currenttext = document.createTextNode(name);
+}else if (i==1){
+currenttext = document.createTextNode(value);
+}
+//将创建的文本节点添加到<td>里
+mycurrent_cell.appendChild(currenttext);
+//将列<td>添加到行<tr>
+mycurrent_row.appendChild(mycurrent_cell);
+}
+mycurrent_row.setAttribute("bgcolor", "#E7E7E7");
+//将行<tr>添加到<tbody>
+mytablebody.appendChild(mycurrent_row);
+}
+}
+//将<tbody>添加到<table>
+mytable.appendChild(mytablebody);
+//将<table>添加到<body>
+mybody.appendChild(mytable);
+//将表格mytable的border属性设置为2
+mytable.setAttribute("border", "1");
+mytable.setAttribute("width", "100%");
+mytable.setAttribute("cellpadding", "2");
+mytable.setAttribute("cellspacing", "1");
+mytable.setAttribute("bgcolor", "#CBD8AC");
+mytable.setAttribute("align", "center");
+mytable.setAttribute("style", "margin-top:8px");
+
+//-->
+</script>
+<title>javascript动态创建table例子</title>
+</head>
+<body>
+
+</body>
+</html>

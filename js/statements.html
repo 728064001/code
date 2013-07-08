@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>文档执行顺序</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.write("页面载入时运行‘立即语句’");
+		</script>
+		<script type="text/javascript">
+			function done(){
+				alert("页面载入完成后运行");
+			}
+			window.onload=done;
+		</script>
+		<script type="text/javascript">
+			function diaoyong(){
+				alert("通过用户操作脚本运行");
+
+			}
+		</script>
+		<input type="button" name="but" value="buuton" onclick="diaoyong()" /><br/>
+		<input type="button" name="but2" value="buuton2" onclick="d()" />
+
+		<script type="text/javascript">
+			function d(){
+				diaoyong2();
+			}
+			function diaoyong2(){
+				alert("通过函数调用");
+			}
+		</script>
+	</body>
+</html>

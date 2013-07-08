@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>document.write()</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var newwindow;
+			var webconte="<html><head><title>prompt</title></head>";
+			webconte+="<body>wa hahahaha</body></html>";
+
+			function createnewwindow(){
+				newwindow=window.open("","","height=600,width=600");
+			}
+			function writ(){
+				if(!newwindow){
+					createnewwindow();
+				}
+				newwindow.document.write(webconte);
+				newwindow.document.close();
+			}
+
+		</script>
+		<input type="button" name="but" id="but" value="create" onclick="writ()"/>
+	</body>
+</html>

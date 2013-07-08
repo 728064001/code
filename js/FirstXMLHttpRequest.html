@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>判断浏览器类型、创建XMLHttpRequest</title>
+</head>
+<script type="text/javascript" language="javascript">
+    	function createHtOj(){
+				if(window.navigator.appName == "Microsoft Internet Explorer"){
+					try{
+						return new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					catch(E){
+						return null;
+						}
+				}else{
+						return new XMLHttpRequest();
+					}//if--end
+			}//func
+			if(createHtOj()!=null){
+					
+					alert("XMLHttpRequest()创建成功！");
+			}
+    </script>
+<body onload="createHtOj()">
+</body>
+</html>

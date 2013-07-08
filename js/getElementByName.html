@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>getElementsByName</title>
+	</head>
+
+	<body>
+		<a name="b" href="#">a</a>
+		<h2 name="b" >b</h2>
+		<span name="b">c</span><br/>
+
+		<script type="text/javascript">
+			var nodelist = document.getElementsByName("b");
+			var len = nodelist.length;
+
+			// alert(len);
+			for (var i = 0; i < len; i++) {
+				document.write((nodelist[i].nodeName).toLowerCase()+"<br/>");
+				document.write("==value:"+nodelist[i].childNodes[0].nodeValue+"<br/>");
+			}
+		</script>
+	</body>
+
+</html>

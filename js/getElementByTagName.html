@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>getElementByTagName</title>
+	</head>
+
+	<body>
+		<div id="div1">div1</div>
+		<div id="div1">div2</div>
+
+		<script type="text/javascript">
+			var nodelist = document.getElementsByTagName("*");
+			// document.write(nodelist.length);
+			var len = nodelist.length;
+			for (var i = 0; i < len; i++) {
+				document.write(nodelist[i].nodeName+"<br/>");
+
+				if(nodelist[i].nodeName=="DIV"){
+					document.writeln("==value:"+nodelist[i].childNodes[0].nodeValue+"<br/>");
+				}
+			}
+
+		</script>
+	</body>
+
+</html>

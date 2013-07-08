@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>sum</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function sums(){
+				var t1 = parseFloat(document.getElementById("nu1").value);
+				var t2 = parseFloat(document.getElementById("nu2").value);
+				var s = t1+t2;
+				document.getElementById("out").value=s;
+			}
+		</script>
+		<input type="text" name="in1" id="nu1"/>
+		+
+		<input type="text" name="in2" id="nu2"/>
+		<input type="button" name="but" id="but" value="sum" onclick="sums()"/>
+		<input type="text" name="out" id="out"/>
+	</body>
+</html>
