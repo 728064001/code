@@ -2,24 +2,76 @@
 	<head>
 		<title>Create a table based on json data</title>
 		<script type="text/javascript">
-			//json data
-			var jsonData ={
+		// json data
+		var jso ={
 				"userinfo":[{"id":1,"name":"郝磊","age":21,"sex":"男","address":"深圳福田"},{"id":2,"name":"徐松","age":20,"sex":"女","address":"湖北随州"},{"id":3,"name":"狮子","age":19,"sex":"女","address":"武汉汉阳"},{"id":4,"name":"小小","age":9,"sex":"女","address":"北海大道"},{"id":5,"name":"黑子","age":10,"sex":"男","address":"铜锣湾"},{"id":6,"name":"猫宝","age":21,"sex":"女","address":"深圳福田"},{"id":7,"name":"旺财","age":19,"sex":"男","address":"北海大道"},{"id":8,"name":"花咪","age":7,"sex":"女","address":"深南大道"},{"id":9,"name":"蓝猫","age":12,"sex":"男","address":"上海南路"},{"id":10,"name":"淘气","age":11,"sex":"女","address":"上海南路"},{"id":11,"name":"萌猫","age":21,"sex":"女","address":"上海宾馆"},{"id":12,"name":"夏柔","age":23,"sex":"女","address":"富南三路"}]
 			}
 
-			//test
-			alert(jsonData.userinfo.length);
-			document.write(jsonData.userinfo[2].name);
+			//get json array length
+			var jsonlength = jso.userinfo.length;
 
+			// th array
+			var thtext  = new Array("ID","姓名","年龄","性别","住址"); 
+			var thtextArrayLength = thtext.length; 
+
+			//td content array(get json /\eg: js.userinfo[x].tdtexts[x])
+			var tdtexts  = new Array("id","name","age","sex","address");
+			var tdtextsArrayLength = tdtexts.length; 
+
+			
+
+			
+
+		function createTable(){
+			//get body
+			var gbody = document.getElementsByTagName("body")[0];
 			//create table
-			var getBody = document.getElementsByTagName("body")[0];
-
 			var ctable = document.createElement("table");
-			var ctbody = document.createElement("tbody");
-		</script>
-	<head>
+			//set table Attribute
+			ctable.setAttribute("border","1");
+			ctable.setAttribute("width","500");
 
-	<body>
+
+			//create th
+			var rth = document.createElement("tr");
+			var tss="";
+			for(var s = 1;s<=thtextArrayLength;s++){
+				cth = document.createElement("th");
+				for(var w = 0;w<s;w++){
+					tss = document.createTextNode(thtext[w]);
+				}
+				cth.appendChild(tss);
+				rth.appendChild(cth);
+			}
+			//将包围th  的 tr 添加到创建的table中  eg : <tr><th></th><th></th><tr>
+			ctable.appendChild(rth);
+
+
+			//create tr td
+			
+			var arry = null;
+			for(var r = 0;r < jsonlength;r++){
+				row = document.createElement("tr");
+				for(var c = 0;c <thtextArrayLength;c++){
+					cell = document.createElement("td");
+					arry = new Array(jso.userinfo[r].id,jso.userinfo[r].name,jso.userinfo[r].age,jso.userinfo[r].sex,jso.userinfo[r].address);
+					ctxt = document.createTextNode(arry[c]);
+					cell.appendChild(ctxt);
+					row.appendChild(cell);
+				}
+				ctable.appendChild(row);
+			}
+
+
+			//将创建的table添加到body中
+			gbody.appendChild(ctable);
+	
+
+		}
+		</script>
+	</head>
+
+	<body onload="createTable()">
 
 	</body>
 </html>
