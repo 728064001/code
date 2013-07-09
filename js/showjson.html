@@ -17,12 +17,17 @@
 				{"city":"beijing","code":"5667"}
 			]
 		}
-		documnet.writeln(json1);
+
+
+
+		var s = "height";
+		document.writeln(json1);
 		document.writeln(json1.names+"<br/>");
 		document.writeln(json1.address[0].code+"<br/>");
 		document.writeln(json1.info.quality+"<br/>");
 		document.writeln(json1.address[1].code+"<br/>");
 		document.writeln(json1.address[0].city+"<br/>");
+		document.writeln(json1.address[0].s)
 
 		function Car(cartype,color,price){
 			this.cartype = cartype;
@@ -32,13 +37,13 @@
 		}
 
     	var objcar = new Car("cars","red",3500000);
-
+    	//将对象转换为JSON数据
     	alert(JSON.stringify(objcar));
 
 
 	</script>
 </head>
 <body>
-
+xbxcvb
 </body>
 </html>
