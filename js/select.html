@@ -5,14 +5,20 @@
 
 	<body>
 		<script type="text/javascript">
-			function sel(o){
-				// var s = document.forms[0].se;
-				document.write("<br/>"+o.se.options[o.se.selectedIndex].text);
+			// function sel(o){
+			// 	// var s = document.forms[0].se;
+			// 	document.write("<br/>"+o.se.options[o.se.selectedIndex].text);
+			// 	// alert(o.options[o.selectedIndex].value);
+			// }
+
+			function sel(){
+				var o = document.getElementById("se");
+				document.write("<br/>"+o.options[o.selectedIndex].text);
 				// alert(o.options[o.selectedIndex].value);
 			}
 		</script>
 		<form name="fomr1">
-			<select name="se" onchange="sel(this.form)">
+			<select name="se" id="se" onblur="sel()">
 				<option value="A">A</option>
 				<option value="B">B</option>
 				<option value="C">C</option>

@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>js创建下拉列表</title>
+	</head>
+
+	<body>
+		<select style="width:80px" id="s">
+			<option>please select</option>
+		</select>
+		<input type="button" style="width:90px;heigth:40px" value="flush" onclick="add()"></input>
+		<script type="text/javascript">
+			var jss ={"company":[{"companyname":"中昱达"},{"companyname":"新昱"}]};
+
+			
+			function add(){
+				var getselect = document.getElementById("s");
+				if(getselect.options.length>1){
+					getselect.options.length=1;
+					addop();
+				}else{
+					addop();
+				}
+			}
+			function addop(){
+
+
+				//get select
+				var getselect = document.getElementById("s");
+				//create option
+				var createoption = document.createElement("option");
+
+				createoption.setAttribute("value", jss.company[0].companyname);
+			
+		
+
+				//create text nods
+				var textnode = document.createTextNode(jss.company[0].companyname);
+
+
+				//add
+				createoption.appendChild(textnode);
+				getselect.appendChild(createoption);
+			}
+
+		
+
+
+
+
+		
+
+		</script>
+	</body>
+</html>

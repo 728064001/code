@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>js get radio value</title>
+	</head>
+
+	<body>
+		<input name="sex" type="radio" value="男" />男<br/>
+		<input name="sex" type="radio" value="女" />女
+		<br/>
+		<input type="button" value="test" onclick="te()"/>
+
+		<script type="text/javascript">
+			//get radio
+			
+			function te(){
+				var getradio = document.getElementsByName("sex");
+	
+				alert(getradio[0].checked);
+				alert(getradio.length);
+			}
+		</script>
+	</body>
+</html>
